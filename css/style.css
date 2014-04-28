@@ -1,14 +1,704 @@
+                                                                                                                                               /* 
+This is the main stylesheet file. To keep things easier to read we don't actually write any css here. Instead we import a bunch of other partial files.
+In Sass a partial has the following properties:
+
+- it starts with an underscore _
+- it is not automatically processed, you have to @import it
+- if it ends with .scss then you can write normal css or write sass or a combination
+
+Also, FYI, this is an example of a comment that won't get erased or compressed when Sass creates the CSS file. Putting the ! after the opening /* tells Sass not to touch it.
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+==========================
+Mixins
+This is not CSS. Mixins work more like functions and help you to write CSS faster. 
+========================== 
+*/
+/* 
+==========================
+Global Styles
+These are styles that apply to every page on the site. For example:
+---------------
+Basic Element styling: body,h1,h2,h3,h4,h5,h6,p, a, a:link, a:hover, a:visited, ul, ul
+Repeated sections: header, footer
+
+I separated Navigation because it is complex and It's more likely that you will reuse it or modify code from someone else. 
+Separating it allows you to more easily change and reuse navigation code.
+========================== 
+*/
+/* apply a natural box layout model to all elements */
+/* line 18, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 
+This is not the only thing you should do for responsive images, but it is a start. Remember that this style will not make your image or video grow any bigger than the original so you have to put in the largest version you will need.
+That can be a performance issue since small screens will download the same image as large ones.
+This article by Luke Wroblewski goes into more detail about that: http://www.lukew.com/ff/entry.asp?1851
+*/
+/* line 27, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+img, video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 40, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+body {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+/* line 49, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+p {
+  margin-bottom: 1em;
+}
+
+/* line 53, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia,'Times New Roman', Times ,serif;
+  font-weight: 900;
+}
+
+/* line 58, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+/* line 59, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+h2 {
+  font-size: 1.6em;
+  line-height: 1.1;
+}
+
+/* line 60, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+h3 {
+  font-size: 1.4em;
+  line-height: 1.1;
+}
+
+/* line 61, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+h4 {
+  font-size: 1.2em;
+  line-height: 1.1;
+}
+
+/* line 62, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+h5 {
+  font-size: 1.1em;
+  line-height: 1.1;
+}
+
+/* line 63, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+h6 {
+  font-size: 1em;
+  line-height: 1.1;
+}
+
+@media only screen and (min-width: 40em) {
+  /* line 67, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  body {
+    font-size: 100%;
+    line-height: 1.5;
+  }
+
+  /* line 68, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h1 {
+    font-size: 2em;
+    line-height: 1.1;
+  }
+
+  /* line 69, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h2 {
+    font-size: 1.8em;
+    line-height: 1.1;
+  }
+
+  /* line 70, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h3 {
+    font-size: 1.6em;
+    line-height: 1.1;
+  }
+
+  /* line 71, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h4 {
+    font-size: 1.4em;
+    line-height: 1.1;
+  }
+
+  /* line 72, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h5 {
+    font-size: 1.2em;
+    line-height: 1.1;
+  }
+
+  /* line 73, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h6 {
+    font-size: 1.1em;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 77, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  body {
+    font-size: 100%;
+    line-height: 1.5;
+  }
+
+  /* line 78, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h1 {
+    font-size: 3em;
+    line-height: 1.1;
+  }
+
+  /* line 79, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h2 {
+    font-size: 2.5em;
+    line-height: 1.1;
+  }
+
+  /* line 80, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h3 {
+    font-size: 2em;
+    line-height: 1.1;
+  }
+
+  /* line 81, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h4 {
+    font-size: 1.8em;
+    line-height: 1.1;
+  }
+
+  /* line 82, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h5 {
+    font-size: 1.4em;
+    line-height: 1.1;
+  }
+
+  /* line 83, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h6 {
+    font-size: 1.1em;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 88, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h1 {
+    font-size: 4.5em;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 97, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h1 {
+    font-size: 5em;
+    line-height: 1.1;
+  }
+
+  /* line 98, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h2 {
+    font-size: 3em;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 102, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  h1 {
+    font-size: 6em;
+    line-height: 1;
+  }
+}
+/* line 109, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+.header {
+  clear: both;
+  margin: 0 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+/* line 114, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+.header .navigation nav {
+  width: 100%;
+}
+/* line 119, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+.header header {
+  width: 75%;
+  padding: 0 15px;
+  float: left;
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 125, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  .header header {
+    width: 100%;
+    padding: 0 15px;
+    float: left;
+  }
+}
+
+/* line 137, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+.footer {
+  clear: both;
+}
+/* line 140, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+.footer .copyright {
+  width: 50%;
+  padding: 0 15px;
+  float: left;
+}
+/* line 144, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+.footer .designedBy {
+  width: 50%;
+  padding: 0 15px;
+  float: left;
+  text-align: right;
+}
+
+/* copied without chaning CSS to be Sassified */
+/* responsive-nav.js 1.0.32 by @viljamis */
+/* line 5, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+/* line 13, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+/* line 18, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 27, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+/* line 31, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+/* line 35, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 46, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  .js .nav-collapse {
+    position: relative;
+  }
+
+  /* line 49, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+
+  /* line 52, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  .nav-toggle {
+    display: none;
+  }
+}
+/* =======================================
+    Custom Styling for Nav. You can use this, modify it or delete it.
+    This is just styling and not required for the nav to work.
+
+    The CSS above IS required and you should not delete that
+
+*/
+/*Here is default*/
+/* ------------------------------------------
+  NAVIGATION STYLES
+  (+ responsive-nav.css file is loaded in the <head>)
+--------------------------------------------- */
+/* line 75, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 83, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-collapse,
+.nav-collapse * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 90, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-collapse,
+.nav-collapse ul {
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+
+/* line 96, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-collapse li {
+  float: left;
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 102, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  .nav-collapse li {
+    width: 25%;
+    *width: 24.9%;
+    /* IE7 Hack */
+    _width: 19%;
+    /* IE6 Hack */
+    width: 15%;
+  }
+}
+/* line 112, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-collapse a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  background: #f4421a;
+  border-bottom: 1px solid white;
+  padding: 0.7em 1em;
+  float: left;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 123, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  .nav-collapse a {
+    margin: 0;
+    padding: 1em;
+    float: left;
+    text-align: center;
+    border-bottom: 0;
+    border-right: 1px solid white;
+  }
+}
+/* line 133, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-collapse ul ul a {
+  background: #ca3716;
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 139, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  .nav-collapse ul ul a {
+    display: none;
+  }
+}
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+@font-face {
+  font-family: "responsivenav";
+  src: url("../icons/responsivenav.eot");
+  src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../icons/responsivenav.ttf") format("truetype"), url("../icons/responsivenav.woff") format("woff"), url("../icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 160, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-toggle {
+  position: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 55px;
+  float: right;
+}
+
+/* line 178, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-toggle:before {
+  color: #f4421a;
+  /* Edit this to change the icon color */
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0;
+  text-align: center;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 197, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-toggle.active::before {
+  font-size: 24px;
+  content: "x";
+}
+
+/*
+  =============================================
+
+
+And here are some customizations I made
+
+This stuff needs to be cleaned up and commented to explain
+
+*/
+/* line 223, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-toggle.active:before {
+  font-size: 24px;
+  content: "x";
+}
+
+/* line 228, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-toggle:before {
+  color: #F4421A;
+  font-family: "responsivenav",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0px;
+  line-height: 55px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  text-align: left;
+}
+
+/* line 246, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+a:active, a:hover {
+  outline: 0px none;
+}
+
+/* line 250, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+.nav-toggle {
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  height: 55px;
+  line-height: 55px;
+  float: right;
+  text-indent: 25px;
+  width: 75px;
+  color: #f4421A;
+}
+
+/* 
+==========================
+Index Page (homepage)
+========================== 
+*/
+@media only screen and (min-width: 30em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  #home {
+    background-color: violet;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  #home {
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  #home {
+    background-color: green;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  #home {
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  #home {
+    background-color: blue;
+    color: white;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  #home {
+    background-color: orange;
+  }
+}
+
+/* 
+==========================
+Schedule Page 
+========================== 
+*/
+/* 
+==========================
+Speakers Page 
+========================== 
+*/
+/* 
+==========================
+About Page 
+========================== 
+*/
+@media only screen and (min-width: 30em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  #about {
+    background-color: violet;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  #about {
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  #about {
+    background-color: green;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  #about {
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  #about {
+    background-color: blue;
+    color: white;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  #about {
+    background-color: orange;
+  }
+}
+
+/* 
+==========================
+Videos Page 
+========================== 
+*/
+/* 
+==========================
+Sessions Page 
+========================== 
+*/
 /* 
 This rule uses the universal selector, *, to apply the border-box model to all elements on a site
 
 see Paul Irish article for where these styles came from and more on why to do it:
 http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
-
 /* apply a natural box layout model to all elements */
+/* line 11, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
 *, *:before, *:after {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -16,156 +706,153 @@ http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 That can be a performance issue since small screens will download the same image as large ones.
 This article by Luke Wroblewski goes into more detail about that: http://www.lukew.com/ff/entry.asp?1851
 */
-img,video{
-  width: auto; 
-  max-width: 100%; 
+/* line 21, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+img, video {
+  width: auto;
+  max-width: 100%;
   height: auto;
 }
 
 /* =====================================
 CSS for <iframe> embedded element
 ===================================== */
+/* line 30, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
 .videoWrapper {
-position: relative;
-padding-bottom: 56.25%; /* 16:9 */
-/* if your video is 4:3 ratio then use the padding-bottom below:*/
-/*padding-bottom: 75%;*/ /* 4:3 */
-padding-top: 25px; /* may need to adjust depending on the size of the player controls of the service you use */
-height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  /* if your video is 4:3 ratio then use the padding-bottom below:*/
+  /*padding-bottom: 75%;*/
+  /* 4:3 */
+  padding-top: 25px;
+  /* may need to adjust depending on the size of the player controls of the service you use */
+  height: 0;
 }
+
+/* line 38, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
 .videoWrapper iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* =====================================
 Basic styles
 ===================================== */
-body{
-    font-family:;
-    font-size:100%;
-    line-height:1.5;
-    background-color:#DEB887;
-
-    
-    
+/* line 49, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+body {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  background-color: #DEB887;
 }
 
-p{
-    margin-bottom:1em;
+/* line 59, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+p {
+  margin-bottom: 1em;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family:;
+/* line 63, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
 }
 
-h1{
-font-size:2em;
-line-height:2em;
+/* line 67, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+h1 {
+  font-size: 2em;
+  line-height: 2em;
 }
 
-
-h2{
-font-size:1.6em;
-line-height:1.6em;
+/* line 73, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+h2 {
+  font-size: 1.6em;
+  line-height: 1.6em;
 }
 
-
-h3{
-font-size:1.4em;
-line-height:1.4em;
+/* line 79, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+h3 {
+  font-size: 1.4em;
+  line-height: 1.4em;
 }
 
-
-h4{
-font-size:1.2em;
-line-height:1.2em;
+/* line 85, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+h4 {
+  font-size: 1.2em;
+  line-height: 1.2em;
 }
-
 
 /* ============================
 * NAVIGATION 
 * Modified from: http://webdesign.tutsplus.com/tutorials/   htmlcss-tutorials/a-simple-responsive-mobile-first-navigation/
-* =============================*/  
-
-#main_nav{
-clear:both;
-}  
-
-#main_nav ul{
-list-style: none;
+* =============================*/
+/* line 96, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+#main_nav {
+  clear: both;
 }
 
-#main_nav li a{
-display:block;
-color:#fff;
-background-color: #555;
-text-transform: uppercase;
-padding: 0.625em; /* 10/16 */
-text-decoration:none;
-border-bottom: 1px solid #eee;
-font-weight:900;
+/* line 100, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+#main_nav ul {
+  list-style: none;
 }
 
-#main_nav li a:hover{
- color:#555;
-background-color: #fff;
+/* line 104, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+#main_nav li a {
+  display: block;
+  color: #fff;
+  background-color: #555;
+  text-transform: uppercase;
+  padding: 0.625em;
+  /* 10/16 */
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  font-weight: 900;
 }
 
-#main_nav li a:active{
-color:#555;
-background-color: #f90;
-}  
+/* line 115, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+#main_nav li a:hover {
+  color: #555;
+  background-color: #fff;
+}
+
+/* line 120, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+#main_nav li a:active {
+  color: #555;
+  background-color: #f90;
+}
 
 /* menu button */
-.menu a{
-padding:0.5em 0.625em; /*10/16 */
-background-color: #555;
-background-color: rgba(60,60,60,.6);
-border-radius:5px;
-color: #fff;
-text-decoration:none;
+/* line 126, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+.menu a {
+  padding: 0.5em 0.625em;
+  /*10/16 */
+  background-color: #555;
+  background-color: rgba(60, 60, 60, 0.6);
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
 }
 
-.menu a:hover{
-color:#555;
-background-color: #f90;
+/* line 135, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+.menu a:hover {
+  color: #555;
+  background-color: #f90;
 }
 
-.menu{
-margin-bottom:1em;
-position:fixed;
-float: right; 
+/* line 140, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+.menu {
+  margin-bottom: 1em;
+  position: fixed;
+  float: right;
 }
-
-
 
 /* =====================================
 index.html styles
 ===================================== */
-
-
-
-
 /* =====================================
 sessions styles
 ===================================== */
-
-
-
-
 /* =====================================
 about styles
 ===================================== */
-
-section.about {
-    
-}
-
-.about{
-    
-}
-
