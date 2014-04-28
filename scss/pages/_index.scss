@@ -22,7 +22,12 @@ Index Page (homepage)
 	//small =============================================
 	@include breakpoint(small){
 		background-color: red;
-		
+		.date{
+			@include col(1,2);
+		}
+		.location{
+			@include col(1,2);
+		}
 	}//end small breakpoint
 
 
@@ -30,7 +35,9 @@ Index Page (homepage)
 	//medium breakpoint =============================================
 	@include breakpoint(medium){
 		background-color: green;
-
+		.track{
+			@include col(1,2);
+		}
 	}// end medium breakpoint
 
 

@@ -12,7 +12,7 @@ Also, FYI, this is an example of a comment that won't get erased or compressed w
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 18, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+/* line 18, ../scss/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -35,35 +35,35 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 28, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+/* line 28, ../scss/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+/* line 31, ../scss/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+/* line 34, ../scss/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+/* line 37, ../scss/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 41, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+/* line 41, ../scss/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 45, /Users/stevenr.martinez/Documents/Finalproject/scss/_reset.scss */
+/* line 45, ../scss/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -88,7 +88,7 @@ Separating it allows you to more easily change and reuse navigation code.
 ========================== 
 */
 /* apply a natural box layout model to all elements */
-/* line 18, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 18, ../scss/_global.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -100,14 +100,14 @@ This is not the only thing you should do for responsive images, but it is a star
 That can be a performance issue since small screens will download the same image as large ones.
 This article by Luke Wroblewski goes into more detail about that: http://www.lukew.com/ff/entry.asp?1851
 */
-/* line 27, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 27, ../scss/_global.scss */
 img, video {
   width: auto;
   max-width: 100%;
   height: auto;
 }
 
-/* line 40, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 40, ../scss/_global.scss */
 body {
   font-family: sans-serif;
   font-size: 100%;
@@ -116,185 +116,185 @@ body {
   background-color: #fff;
 }
 
-/* line 49, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 49, ../scss/_global.scss */
 p {
   margin-bottom: 1em;
 }
 
-/* line 53, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 53, ../scss/_global.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia,'Times New Roman', Times ,serif;
   font-weight: 900;
 }
 
-/* line 58, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 58, ../scss/_global.scss */
 h1 {
   font-size: 2em;
   line-height: 1.1;
 }
 
-/* line 59, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 59, ../scss/_global.scss */
 h2 {
   font-size: 1.6em;
   line-height: 1.1;
 }
 
-/* line 60, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 60, ../scss/_global.scss */
 h3 {
   font-size: 1.4em;
   line-height: 1.1;
 }
 
-/* line 61, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 61, ../scss/_global.scss */
 h4 {
   font-size: 1.2em;
   line-height: 1.1;
 }
 
-/* line 62, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 62, ../scss/_global.scss */
 h5 {
   font-size: 1.1em;
   line-height: 1.1;
 }
 
-/* line 63, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 63, ../scss/_global.scss */
 h6 {
   font-size: 1em;
   line-height: 1.1;
 }
 
 @media only screen and (min-width: 40em) {
-  /* line 67, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 67, ../scss/_global.scss */
   body {
     font-size: 100%;
     line-height: 1.5;
   }
 
-  /* line 68, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 68, ../scss/_global.scss */
   h1 {
     font-size: 2em;
     line-height: 1.1;
   }
 
-  /* line 69, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 69, ../scss/_global.scss */
   h2 {
     font-size: 1.8em;
     line-height: 1.1;
   }
 
-  /* line 70, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 70, ../scss/_global.scss */
   h3 {
     font-size: 1.6em;
     line-height: 1.1;
   }
 
-  /* line 71, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 71, ../scss/_global.scss */
   h4 {
     font-size: 1.4em;
     line-height: 1.1;
   }
 
-  /* line 72, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 72, ../scss/_global.scss */
   h5 {
     font-size: 1.2em;
     line-height: 1.1;
   }
 
-  /* line 73, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 73, ../scss/_global.scss */
   h6 {
     font-size: 1.1em;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 50em) {
-  /* line 77, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 77, ../scss/_global.scss */
   body {
     font-size: 100%;
     line-height: 1.5;
   }
 
-  /* line 78, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 78, ../scss/_global.scss */
   h1 {
     font-size: 3em;
     line-height: 1.1;
   }
 
-  /* line 79, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 79, ../scss/_global.scss */
   h2 {
     font-size: 2.5em;
     line-height: 1.1;
   }
 
-  /* line 80, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 80, ../scss/_global.scss */
   h3 {
     font-size: 2em;
     line-height: 1.1;
   }
 
-  /* line 81, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 81, ../scss/_global.scss */
   h4 {
     font-size: 1.8em;
     line-height: 1.1;
   }
 
-  /* line 82, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 82, ../scss/_global.scss */
   h5 {
     font-size: 1.4em;
     line-height: 1.1;
   }
 
-  /* line 83, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 83, ../scss/_global.scss */
   h6 {
     font-size: 1.1em;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 67.5em) {
-  /* line 88, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 88, ../scss/_global.scss */
   h1 {
     font-size: 4.5em;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 97, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 97, ../scss/_global.scss */
   h1 {
     font-size: 5em;
     line-height: 1.1;
   }
 
-  /* line 98, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 98, ../scss/_global.scss */
   h2 {
     font-size: 3em;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 102, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 102, ../scss/_global.scss */
   h1 {
     font-size: 6em;
     line-height: 1;
   }
 }
-/* line 109, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 109, ../scss/_global.scss */
 .header {
   clear: both;
   margin: 0 0;
   overflow: hidden;
   margin-bottom: 30px;
 }
-/* line 114, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 114, ../scss/_global.scss */
 .header .navigation nav {
   width: 100%;
 }
-/* line 119, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 119, ../scss/_global.scss */
 .header header {
   width: 75%;
   padding: 0 15px;
   float: left;
 }
 @media only screen and (min-width: 67.5em) {
-  /* line 125, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+  /* line 125, ../scss/_global.scss */
   .header header {
     width: 100%;
     padding: 0 15px;
@@ -302,17 +302,17 @@ h6 {
   }
 }
 
-/* line 137, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 137, ../scss/_global.scss */
 .footer {
   clear: both;
 }
-/* line 140, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 140, ../scss/_global.scss */
 .footer .copyright {
   width: 50%;
   padding: 0 15px;
   float: left;
 }
-/* line 144, /Users/stevenr.martinez/Documents/Finalproject/scss/_global.scss */
+/* line 144, ../scss/_global.scss */
 .footer .designedBy {
   width: 50%;
   padding: 0 15px;
@@ -322,7 +322,7 @@ h6 {
 
 /* copied without chaning CSS to be Sassified */
 /* responsive-nav.js 1.0.32 by @viljamis */
-/* line 5, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 5, ../scss/_responsive-nav.scss */
 .nav-collapse ul {
   margin: 0;
   padding: 0;
@@ -331,13 +331,13 @@ h6 {
   list-style: none;
 }
 
-/* line 13, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 13, ../scss/_responsive-nav.scss */
 .nav-collapse li {
   width: 100%;
   display: block;
 }
 
-/* line 18, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 18, ../scss/_responsive-nav.scss */
 .js .nav-collapse {
   clip: rect(0 0 0 0);
   max-height: 0;
@@ -347,17 +347,17 @@ h6 {
   zoom: 1;
 }
 
-/* line 27, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 27, ../scss/_responsive-nav.scss */
 .nav-collapse.opened {
   max-height: 9999px;
 }
 
-/* line 31, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 31, ../scss/_responsive-nav.scss */
 .disable-pointer-events {
   pointer-events: none !important;
 }
 
-/* line 35, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 35, ../scss/_responsive-nav.scss */
 .nav-toggle {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
@@ -369,17 +369,17 @@ h6 {
 }
 
 @media screen and (min-width: 40em) {
-  /* line 46, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  /* line 46, ../scss/_responsive-nav.scss */
   .js .nav-collapse {
     position: relative;
   }
 
-  /* line 49, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  /* line 49, ../scss/_responsive-nav.scss */
   .js .nav-collapse.closed {
     max-height: none;
   }
 
-  /* line 52, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  /* line 52, ../scss/_responsive-nav.scss */
   .nav-toggle {
     display: none;
   }
@@ -396,7 +396,7 @@ h6 {
   NAVIGATION STYLES
   (+ responsive-nav.css file is loaded in the <head>)
 --------------------------------------------- */
-/* line 75, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 75, ../scss/_responsive-nav.scss */
 .fixed {
   position: fixed;
   width: 100%;
@@ -404,7 +404,7 @@ h6 {
   left: 0;
 }
 
-/* line 83, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 83, ../scss/_responsive-nav.scss */
 .nav-collapse,
 .nav-collapse * {
   -moz-box-sizing: border-box;
@@ -412,7 +412,7 @@ h6 {
   box-sizing: border-box;
 }
 
-/* line 90, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 90, ../scss/_responsive-nav.scss */
 .nav-collapse,
 .nav-collapse ul {
   list-style: none;
@@ -420,14 +420,14 @@ h6 {
   float: left;
 }
 
-/* line 96, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 96, ../scss/_responsive-nav.scss */
 .nav-collapse li {
   float: left;
   width: 100%;
 }
 
 @media screen and (min-width: 40em) {
-  /* line 102, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  /* line 102, ../scss/_responsive-nav.scss */
   .nav-collapse li {
     width: 25%;
     *width: 24.9%;
@@ -437,7 +437,7 @@ h6 {
     width: 15%;
   }
 }
-/* line 112, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 112, ../scss/_responsive-nav.scss */
 .nav-collapse a {
   color: #fff;
   text-decoration: none;
@@ -449,7 +449,7 @@ h6 {
 }
 
 @media screen and (min-width: 40em) {
-  /* line 123, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  /* line 123, ../scss/_responsive-nav.scss */
   .nav-collapse a {
     margin: 0;
     padding: 1em;
@@ -459,14 +459,14 @@ h6 {
     border-right: 1px solid white;
   }
 }
-/* line 133, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 133, ../scss/_responsive-nav.scss */
 .nav-collapse ul ul a {
   background: #ca3716;
   padding-left: 2em;
 }
 
 @media screen and (min-width: 40em) {
-  /* line 139, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+  /* line 139, ../scss/_responsive-nav.scss */
   .nav-collapse ul ul a {
     display: none;
   }
@@ -482,7 +482,7 @@ h6 {
   font-style: normal;
 }
 
-/* line 160, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 160, ../scss/_responsive-nav.scss */
 .nav-toggle {
   position: fixed;
   -webkit-font-smoothing: antialiased;
@@ -501,7 +501,7 @@ h6 {
   float: right;
 }
 
-/* line 178, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 178, ../scss/_responsive-nav.scss */
 .nav-toggle:before {
   color: #f4421a;
   /* Edit this to change the icon color */
@@ -522,7 +522,7 @@ h6 {
   left: 0;
 }
 
-/* line 197, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 197, ../scss/_responsive-nav.scss */
 .nav-toggle.active::before {
   font-size: 24px;
   content: "x";
@@ -537,13 +537,13 @@ And here are some customizations I made
 This stuff needs to be cleaned up and commented to explain
 
 */
-/* line 223, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 223, ../scss/_responsive-nav.scss */
 .nav-toggle.active:before {
   font-size: 24px;
   content: "x";
 }
 
-/* line 228, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 228, ../scss/_responsive-nav.scss */
 .nav-toggle:before {
   color: #F4421A;
   font-family: "responsivenav",sans-serif;
@@ -562,12 +562,12 @@ This stuff needs to be cleaned up and commented to explain
   text-align: left;
 }
 
-/* line 246, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 246, ../scss/_responsive-nav.scss */
 a:active, a:hover {
   outline: 0px none;
 }
 
-/* line 250, /Users/stevenr.martinez/Documents/Finalproject/scss/_responsive-nav.scss */
+/* line 250, ../scss/_responsive-nav.scss */
 .nav-toggle {
   -moz-osx-font-smoothing: grayscale;
   -moz-user-select: none;
@@ -588,38 +588,56 @@ Index Page (homepage)
 ========================== 
 */
 @media only screen and (min-width: 30em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  /* line 9, ../scss/pages/_index.scss */
   #home {
     background-color: violet;
   }
 }
 @media only screen and (min-width: 40em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  /* line 9, ../scss/pages/_index.scss */
   #home {
     background-color: red;
   }
+  /* line 25, ../scss/pages/_index.scss */
+  #home .date {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 28, ../scss/pages/_index.scss */
+  #home .location {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
 }
 @media only screen and (min-width: 50em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  /* line 9, ../scss/pages/_index.scss */
   #home {
     background-color: green;
   }
+  /* line 38, ../scss/pages/_index.scss */
+  #home .track {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
 }
 @media only screen and (min-width: 67.5em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  /* line 9, ../scss/pages/_index.scss */
   #home {
     background-color: yellow;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  /* line 9, ../scss/pages/_index.scss */
   #home {
     background-color: blue;
     color: white;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_index.scss */
+  /* line 9, ../scss/pages/_index.scss */
   #home {
     background-color: orange;
   }
@@ -630,6 +648,44 @@ Index Page (homepage)
 Schedule Page 
 ========================== 
 */
+@media only screen and (min-width: 30em) {
+  /* line 9, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: violet;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 9, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 9, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: green;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 9, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 9, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: blue;
+    color: white;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 9, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: orange;
+  }
+}
+
 /* 
 ==========================
 Speakers Page 
@@ -641,38 +697,38 @@ About Page
 ========================== 
 */
 @media only screen and (min-width: 30em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  /* line 9, ../scss/pages/_about.scss */
   #about {
     background-color: violet;
   }
 }
 @media only screen and (min-width: 40em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  /* line 9, ../scss/pages/_about.scss */
   #about {
     background-color: red;
   }
 }
 @media only screen and (min-width: 50em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  /* line 9, ../scss/pages/_about.scss */
   #about {
     background-color: green;
   }
 }
 @media only screen and (min-width: 67.5em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  /* line 9, ../scss/pages/_about.scss */
   #about {
     background-color: yellow;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  /* line 9, ../scss/pages/_about.scss */
   #about {
     background-color: blue;
     color: white;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 9, /Users/stevenr.martinez/Documents/Finalproject/scss/pages/_about.scss */
+  /* line 9, ../scss/pages/_about.scss */
   #about {
     background-color: orange;
   }
@@ -695,7 +751,7 @@ see Paul Irish article for where these styles came from and more on why to do it
 http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
 /* apply a natural box layout model to all elements */
-/* line 11, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 11, ../scss/_midterm.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -706,7 +762,7 @@ http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 That can be a performance issue since small screens will download the same image as large ones.
 This article by Luke Wroblewski goes into more detail about that: http://www.lukew.com/ff/entry.asp?1851
 */
-/* line 21, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 21, ../scss/_midterm.scss */
 img, video {
   width: auto;
   max-width: 100%;
@@ -716,7 +772,7 @@ img, video {
 /* =====================================
 CSS for <iframe> embedded element
 ===================================== */
-/* line 30, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 30, ../scss/_midterm.scss */
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -729,7 +785,7 @@ CSS for <iframe> embedded element
   height: 0;
 }
 
-/* line 38, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 38, ../scss/_midterm.scss */
 .videoWrapper iframe {
   position: absolute;
   top: 0;
@@ -741,7 +797,7 @@ CSS for <iframe> embedded element
 /* =====================================
 Basic styles
 ===================================== */
-/* line 49, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 49, ../scss/_midterm.scss */
 body {
   font-family: sans-serif;
   font-size: 100%;
@@ -749,35 +805,35 @@ body {
   background-color: #DEB887;
 }
 
-/* line 59, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 59, ../scss/_midterm.scss */
 p {
   margin-bottom: 1em;
 }
 
-/* line 63, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 63, ../scss/_midterm.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: serif;
 }
 
-/* line 67, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 67, ../scss/_midterm.scss */
 h1 {
   font-size: 2em;
   line-height: 2em;
 }
 
-/* line 73, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 73, ../scss/_midterm.scss */
 h2 {
   font-size: 1.6em;
   line-height: 1.6em;
 }
 
-/* line 79, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 79, ../scss/_midterm.scss */
 h3 {
   font-size: 1.4em;
   line-height: 1.4em;
 }
 
-/* line 85, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 85, ../scss/_midterm.scss */
 h4 {
   font-size: 1.2em;
   line-height: 1.2em;
@@ -787,17 +843,17 @@ h4 {
 * NAVIGATION 
 * Modified from: http://webdesign.tutsplus.com/tutorials/   htmlcss-tutorials/a-simple-responsive-mobile-first-navigation/
 * =============================*/
-/* line 96, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 96, ../scss/_midterm.scss */
 #main_nav {
   clear: both;
 }
 
-/* line 100, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 100, ../scss/_midterm.scss */
 #main_nav ul {
   list-style: none;
 }
 
-/* line 104, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 104, ../scss/_midterm.scss */
 #main_nav li a {
   display: block;
   color: #fff;
@@ -810,20 +866,20 @@ h4 {
   font-weight: 900;
 }
 
-/* line 115, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 115, ../scss/_midterm.scss */
 #main_nav li a:hover {
   color: #555;
   background-color: #fff;
 }
 
-/* line 120, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 120, ../scss/_midterm.scss */
 #main_nav li a:active {
   color: #555;
   background-color: #f90;
 }
 
 /* menu button */
-/* line 126, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 126, ../scss/_midterm.scss */
 .menu a {
   padding: 0.5em 0.625em;
   /*10/16 */
@@ -834,13 +890,13 @@ h4 {
   text-decoration: none;
 }
 
-/* line 135, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 135, ../scss/_midterm.scss */
 .menu a:hover {
   color: #555;
   background-color: #f90;
 }
 
-/* line 140, /Users/stevenr.martinez/Documents/Finalproject/scss/_midterm.scss */
+/* line 140, ../scss/_midterm.scss */
 .menu {
   margin-bottom: 1em;
   position: fixed;
